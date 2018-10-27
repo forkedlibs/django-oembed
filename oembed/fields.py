@@ -19,13 +19,3 @@ class OEmbedField(models.URLField):
             if re.match(pattern, value):
                 return
         raise exceptions.ValidationError('Not a valid oEmbed link')
-
-
-try:
-    from south.modelsinspector import add_introspection_rules
-except ImportError:
-    pass # No south, nevermind
-else:
-    # Tell south to treat OEmbedFields just like URLFields
-    rules = ['^%s\.OEmbedField' % (__name__.replace('.','\.'),)]
-    add_introspection_rules([], rules)
