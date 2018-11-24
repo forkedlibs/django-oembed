@@ -618,5 +618,15 @@
             "name": "official.fm",
             "format": 1
      	}
+    },
+    {
+        "pk": 63,
+        "model": "oembed.providerrule",
+        "fields": {
+            "regex": "https?://www\\.facebook\\.com/\\S*/videos/\\d+/?",
+            "endpoint": "https://www.facebook.com/plugins/video/oembed.json",
+            "name": "Facebook Video",
+            "format": 1
+        }
     }
 ]
